@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Software Development</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header>
+  <div class="container-1">
+    <div class="logo">
+      <a class="logo-a" href="./index.html">
+        <img class="logo-img" src="./image/icon.svg" alt="Logo Icon" />
+        <p class="logo-p">SoDev</p>
+      </a>
+    </div>
+    <div class="menu">
+      ☰
+      <div class="dropdown">
+        <a href="#app-development">App Development</a>
+        <a href="#faster-prototyping">Faster Prototyping</a>
+        <a href="#web-design">Web Design</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+    <main>
+      <div class="container">
+        <h1>Software Development</h1>
+        <div class="cards">
+            <div class="card">
+              <img src="./image/1.jpg" alt="App Development" />
+              <h2>App Development</h2>
+              <p>
+                Build powerful and intuitive mobile and desktop applications tailored to your business needs. 
+                From idea to deployment, we've got you covered.
+              </p>
+              <a href="#">Learn more →</a>
+            </div>
+            <div class="card">
+              <img src="./image/2.jpg" alt="Faster Prototyping" />
+              <h2>Faster Prototyping</h2>
+              <p>
+                Quickly transform your ideas into functional prototypes. Our agile approach accelerates 
+                the process without compromising quality.
+              </p>
+              <a href="#">Learn more →</a>
+            </div>
+            <div class="card">
+              <img src="./image/3.jpg" alt="Web Design" />
+              <h2>Web Design</h2>
+              <p>
+                Create stunning and user-friendly websites that captivate your audience. Our designs 
+                combine aesthetics with functionality.
+              </p>
+              <a href="#">Learn more →</a>
+            </div>
+          </div>          
+        </div>
+      </div>
+    </main>
+
+    <footer>
+        <p>
+          &copy; 2024 Software Development. All rights reserved. | <a href="#privacy-policy">Privacy Policy</a>
+        </p>
+      </footer>
+      
+    <script>
+        const menu = document.querySelector('.menu');
+        const dropdown = document.querySelector('.dropdown');
+  
+        menu.addEventListener('click', () => {
+          dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        });
+
+        document.addEventListener('click', (event) => {
+          if (!menu.contains(event.target)) {
+            dropdown.style.display = 'none';
+          }
+        });
+      </script>
+  </body>
+</html>
